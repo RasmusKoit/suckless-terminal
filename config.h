@@ -194,6 +194,7 @@ static MouseShortcut mshortcuts[] = {
 
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
+#define TERMMOD (ControlMask|ShiftMask)
 
 MouseKey mkeys[] = {
 	/* button               mask            function        argument */
@@ -225,8 +226,8 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_KP_Subtract,   	zoom,          	{.f = -1} },
 	{ ControlMask,          XK_KP_0,           	zoomreset,     	{.f =  0} },
 	{ ShiftMask,            XK_KP_Insert,      	clippaste,      {.i =  0} },
-	{ ControlMask,          XK_C,           	clipcopy,       {.i =  0} },
-	{ ControlMask,          XK_V,           	clippaste,      {.i =  0} },
+	{ TERMMOD,              XK_C,           	clipcopy,       {.i =  0} },
+	{ TERMMOD,              XK_V,           	clippaste,      {.i =  0} },
 	{ MODKEY,		XK_Num_Lock,		numlock,	{.i =  0} },
 	{ MODKEY,               XK_Control_L,   	iso14755,       {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     	kscrollup,      {.i = -1} },
